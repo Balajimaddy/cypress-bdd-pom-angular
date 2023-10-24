@@ -1,0 +1,5 @@
+{
+    "registration":  "registration-login-example/#/register",
+    "banking": "BankingProject/#/login",
+    "bankinDeposit": "BankingProject/#/account"
+}
