@@ -1,10 +1,11 @@
 export class BankLoginPage {
-    elements = {
-        customerLoginButton: () => cy.get("button").contains("Customer Login"),
+
+    get customerLoginButton() {
+        return cy.get("button").contains("Customer Login");
     }
 
     clickCustomerLoginButton() {
-        this.elements.customerLoginButton().click();
+        this.customerLoginButton.click();
     }
 
     bankLogin(loginType) {

@@ -1,30 +1,43 @@
 export class RegistrationPage {
-    elements = {
-        firstNameText: () => cy.get("#firstName"),
-        lastNameText: () => cy.get("#Text1"),
-        userNameText: () => cy.get("#username"),
-        passwordText: () => cy.get("#password"),
-        registerButton: () => cy.get("button").contains("Register")
+
+    get firstNameText() {
+        return cy.get("#firstName");
+    }
+
+    get lastNameText() {
+        return cy.get("#Text1");
+    }
+
+    get userNameText() {
+        return cy.get("#username");
+    }
+
+    get passwordText() {
+        return cy.get("#password");
+    }
+
+    get registerButton() {
+        return cy.get("button").contains("Register");
     }
 
     typeFirstName(firstName) {
-        this.elements.firstNameText().type(firstName)
+        this.firstNameText.type(firstName)
     } 
 
     typeLastName(lastName) { 
-        this.elements.lastNameText().type(lastName)
+        this.lastNameText.type(lastName)
     }
 
     typeUserName(userName) {
-        this.elements.userNameText().type(userName)
+        this.userNameText.type(userName)
     }
 
     typePassword(password) {
-        this.elements.passwordText().type(password)
+        this.passwordText.type(password)
     }
 
     clickRegisterButton() {
-        this.elements.registerButton().click()
+        this.registerButton.click()
     }
 
     submitLogin(firstName,lastName,userName,password) {
